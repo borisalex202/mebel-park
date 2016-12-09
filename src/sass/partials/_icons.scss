@@ -1,0 +1,111 @@
+.icon {
+  cursor: pointer;
+  @include transition(all .3s ease);
+
+  &-radius {
+    background: #fff;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  &-logo {
+    max-width: 150px;
+    max-height: 61px;
+
+    @media screen and (max-width: $screen-sm-max) {
+      max-width: 100px;
+      max-height: 42px;
+    }
+  }
+  &-menu {
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+
+    &:hover {
+      .icon-bar {
+        background: lighten($menu-color, 10%);
+      }
+    }
+    .icon-bar {
+      display: block;
+      width: 44px;
+      height: 8px;
+      margin-bottom: 6px;
+      background: $menu-color;
+      border-radius: 6px;
+
+      @include transition(all .3s ease);
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      display: block;
+    }
+  }
+  &-search {
+    max-width: 19px;
+    max-height: 18px;
+    color: #000;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &-cross {
+    max-width: 42px;
+    max-height: 30px;
+    color: #3C3C3C;
+
+    &:hover {
+      color: lighten(#3C3C3C, 10%);
+    }
+  }
+  &-shops {
+    max-width: 44px;
+    max-height: 44px;
+    color: #A05EA9;
+    position: relative;
+    top:-4px;
+  }
+  &-rocket {
+    max-width: 44px;
+    max-height: 44px;
+    color: #EB5942;
+  }
+  &-coffee {
+    max-width: 44px;
+    max-height: 44px;
+    color: #B1C116;
+    position: relative;
+    left: 2px;
+    top:-3px;
+  }
+  &-marker {
+    max-width: 44px;
+    max-height: 44px;
+    color: #A05EA9;
+  }
+  &-metro {
+    background: url('../img/icon-metro.png') no-repeat;
+    width: 57px;
+    height: 69px;
+  }
+  &-arrow {
+    &-prev,
+    &-next {
+      max-width: 44px;
+      max-height: 44px;
+      color: #fff;
+    }
+  }
+}

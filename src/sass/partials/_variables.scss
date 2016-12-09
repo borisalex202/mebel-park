@@ -1,0 +1,43 @@
+/* Fonts */
+$font-family:           'Open Sans', sans-serif;
+$font-size:             14px;
+
+/* Main */
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width);
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop ;
+
+// Large screen / wide desktop
+$container-large-desktop:      (940px + $grid-gutter-width) ;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop;
+
+$main-color:            #A05EA9;
+$secodn-color:          #B1C116;
+
+$text-color:            #3C3C3C;
+$head-color:            #444;
+
+$menu-color:            #EB5942;
+
+/* Links */
+$link-color:            $main-color;
+$link-hover-color:      lighten($main-color, 10%);
+$link-hover-decoration: underline;
+
+/* Buttons */
+$btn-default-bg:        #9CAB14;
+$btn-default-bg-hover:  lighten($btn-default-bg, 10%);
+
+// Widgets
+$widget-colors: (
+  white   : #fff,
+  orange  : #EB5942,
+  purple  : #A05EA9,
+  green   : #B1C116
+);

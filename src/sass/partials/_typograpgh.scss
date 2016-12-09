@@ -1,0 +1,116 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: underline;
+  @include transition(all .3s ease);
+
+  &.link {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+  &.hover {
+    color: $link-hover-color;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  color: $head-color;
+}
+h1 {
+  font-size: 47px;
+}
+h2 {
+  font-size: 36px;
+
+  @media screen and (max-width: $screen-sm-max) {
+    line-height: 52px;
+  }
+}
+h3 {
+  font-size: 22px;
+
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 32px;
+  }
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 13px;
+}
+p {
+  color: $text-color;
+  font-size: $font-size;
+  line-height: 19px;
+
+  @for $lh from 12 through 100 {
+    @if $lh % 2 == 0 {
+      &.lh-#{$lh} {
+        line-height: $lh#{'px'};
+
+        &-md {
+          @media screen and (min-width: $screen-md) {
+            line-height: $lh#{'px'};
+          }
+        }
+        &-sm {
+          @media screen and (max-width: $screen-sm-max) {
+            line-height: $lh#{'px'};
+          }
+        }
+        &-xs {
+          @media screen and (max-width: $screen-xs-max) {
+            line-height: $lh#{'px'};
+          }
+        }
+      }
+    }
+  }
+}
+strong {
+  font-weight: 700;
+}
+ol {
+  li {
+    margin: 0 0 10px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 20px 25px 13px;
+  outline: none !important;
+  @include transition(all .5s ease);
+
+}
+select {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+hr {
+  &.tablet {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.title {
+
+}

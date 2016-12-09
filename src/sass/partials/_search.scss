@@ -1,0 +1,40 @@
+.search {
+  &-block,
+  &-icon,
+  &-input {
+    cursor: pointer;
+    @include transition(all .5s ease);
+  }
+  &-block {
+    position: relative;
+
+    &.active {
+      .search-input {
+        @include opacity(1);
+      }
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+  &-icon {
+    border: 0;
+    padding: 0;
+    background: #fff;
+    position: relative;
+    top: 2px;
+    z-index: 5;
+  }
+  &-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 15px;
+    border: 0;
+    border-bottom: 1px solid #CECECE;
+    z-index: 4;
+    width: 0;
+
+    @include opacity(0);
+  }
+}
