@@ -31,6 +31,37 @@
     padding: 0 15px;
     text-align: center;
 
+    &-top {
+      .slick-dots {
+        bottom: inherit;
+        top: 15px;
+      }
+    }
+    &-white {
+      .slick-dots {
+        li {
+          button {
+            border: 2px solid #fff;
+          }
+          &:hover {
+            button {
+              border: 2px solid lighten(#fff, 10%);
+            }
+          }
+          &.slick-active {
+            button {
+              background: #fff;
+              cursor: default;
+            }
+            &:hover {
+              button {
+                border: 2px solid #fff;
+              }
+            }
+          }
+        }
+      }
+    }
     li {
       display: inline-block;
       vertical-align: top;

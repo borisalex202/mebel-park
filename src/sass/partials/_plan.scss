@@ -1,0 +1,92 @@
+.plan {
+  min-height: 800px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  &-navigation {
+    padding-top: 25px;
+    text-align: right;
+
+    p {
+      text-align: right;
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      position: static;
+      text-align: center;
+      margin: 0 -15px;
+      background: #fff;
+      padding: 20px 10px 30px;
+
+      p {
+        color: #3C3C3C !important;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .nav-tabs {
+        li {
+          margin-left: 15px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+          &.active {
+            a {
+              @include opacity(1);
+              background: $main-color;
+              border: 4px solid $main-color;
+              color: #fff;
+            }
+          }
+          a {
+            border: 4px solid;
+            color: $main-color;
+            font-size: 22px;
+            line-height: 30px;
+            text-decoration: none;
+            padding: 6px 32px;
+            border-radius: 35px;
+
+            @include opacity(.6);
+
+            &:hover {
+              @include opacity(1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 2;
+
+    @media screen and (max-width: $screen-sm-max) {
+      position: static;
+      width: 100%;
+    }
+  }
+  .tab-content {
+    svg {
+      margin-left: 45px;
+    }
+  }
+  .scroll-pane {
+    max-width: 100%;
+    height: 1000px;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    .tab-content {
+      overflow: auto;
+
+      svg {
+        margin-left: 0;
+      }
+    }
+  }
+}

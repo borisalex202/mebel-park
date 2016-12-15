@@ -114,3 +114,107 @@ hr {
 .title {
 
 }
+.nav-tabs {
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &.active {
+      a {
+        @include opacity(1);
+        background: #fff;
+        border: 4px solid #fff;
+        color: $main-color;
+      }
+    }
+    a {
+      display: inline-block;
+      border: 4px solid;
+      color: #fff;
+      font-size: 22px;
+      line-height: 30px;
+      text-decoration: none;
+      padding: 6px 32px;
+      border-radius: 35px;
+
+      @include opacity(.6);
+
+      &:hover {
+        @include opacity(1);
+      }
+    }
+  }
+}
+.tab {
+  &-content {
+
+  }
+  &-pane {
+    display: none;
+    @include transition(all .5s ease);
+
+    &.active {
+      display: block;
+    }
+  }
+}
+.input-block {
+  position: relative;
+  margin-bottom: 45px;
+
+  &-placeholder {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    font-size: 16px;
+    color: #757575;
+    pointer-events: none;
+    @include transition(all .5s ease);
+  }
+  &[class*="col-"] {
+    .input-block-placeholder {
+      left: 40px;
+    }
+    input,
+    textarea,
+    select {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+  }
+  &.active {
+    .input-block-placeholder {
+      top: 7px;
+      font-size: 13px;
+      color: #7A7A7A;
+    }
+  }
+  &.valid {
+    input,
+    textarea,
+    select {
+      border-bottom: 1px solid #61BE2A;
+    }
+  }
+  &.invalid {
+    input,
+    textarea,
+    select {
+      border-bottom: 1px solid #F94C4C;
+    }
+  }
+  input,
+  textarea,
+  select {
+    border: 0;
+    border-bottom: 1px solid #CECECE;
+    font-size: 18px;
+    color: #383838;
+    padding: 25px 0 7px;
+  }
+}

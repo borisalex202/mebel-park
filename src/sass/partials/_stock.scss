@@ -13,11 +13,73 @@
     }
   }
   &-block {
+    text-decoration: none !important;
     background: #fff;
     margin: 0 10px;
     border-radius: 15px;
     @include box-shadow(0 1px 3px 0 rgba(0,0,0,.3));
 
+    &:hover {
+      .content .title {
+        color: $main-color;
+      }
+    }
+    &.single {
+      max-width: 620px;
+      margin: 0 auto;
+
+      .thumbnail {
+        border-radius: 15px 15px 0 0;
+        max-height: 300px;
+      }
+      .content {
+        padding: 30px 80px 100px;
+
+        .promotion-time {
+          position: static;
+          margin-bottom: 45px;
+
+          li {
+            font-size: 18px;
+            color: #EB5942;
+
+            &:after {
+              position: relative;
+              top: 2px;
+            }
+          }
+        }
+        p {
+          margin-bottom: 25px;
+        }
+      }
+      @media screen and (max-width: $screen-xs-max) {
+        max-width: none;
+        width: calc(100% + 30px);
+        margin: 0 -15px;
+        border-radius: 0;
+
+        .thumbnail {
+          border-radius: 0;
+        }
+        .content {
+          padding: 30px 15px;
+
+          .promotion-time {
+            margin-bottom: 20px;
+
+            li{
+              &:nth-child(2):after {
+                display: none;
+              }
+              &:last-child {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
     .thumbnail {
       max-height: 220px;
       overflow: hidden;
@@ -39,10 +101,7 @@
         display: block;
         text-decoration: none !important;
         color: #000;
-
-        &:hover {
-          color: $main-color;
-        }
+        @include transition(all .3s ease);
       }
       .description {
         color: #000;
@@ -56,7 +115,6 @@
 
         li {
           display: inline-block;
-          vertical-align: top;
           position: relative;
           font-size: 14px;
           color: rgba(0,0,0,.4);
@@ -68,6 +126,8 @@
             height: 20px;
             background: rgba(0,0,0,.2);
             margin: 0 10px;
+            position: relative;
+            top: 4px;
           }
           &:last-child:after {
             display: none;

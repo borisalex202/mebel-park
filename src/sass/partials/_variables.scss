@@ -34,10 +34,22 @@ $link-hover-decoration: underline;
 $btn-default-bg:        #9CAB14;
 $btn-default-bg-hover:  lighten($btn-default-bg, 10%);
 
+$btn-primary-bg:        #fff;
+$btn-primary-bg-hover:  darken($btn-primary-bg, 10%);
+
 // Widgets
 $widget-colors: (
   white   : #fff,
   orange  : #EB5942,
   purple  : #A05EA9,
   green   : #B1C116
+);
+
+// Category
+$category-colors: (
+  gray    : #E6E0D8,
+  orange  : #ED6452,
+  purple  : #A05EA9,
+  green   : #AABD27,
+  blue    : #17A5BB
 );

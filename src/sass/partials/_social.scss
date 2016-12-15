@@ -1,0 +1,23 @@
+.social {
+  text-align: center;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+
+    a {
+      color: #fff;
+      font-size: 24px;
+
+      &:hover {
+        color: darken(#fff, 20%);
+      }
+    }
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    li {
+      margin: 0 4px;
+    }
+  }
+}

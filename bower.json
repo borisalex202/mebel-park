@@ -21,5 +21,7 @@
     "slick-carousel": "*",
     "normalize.css": "*",
     "bootstrap-sass": "3.*",
+    "jquery-mask-plugin": "1.14.*",
+    "jscrollpane": "2.0.*"
   }
 }
