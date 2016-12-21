@@ -2,7 +2,7 @@ function resizeSearch() {
   var el = $('.search-icon'),
       parent = el.closest('.search-block'),
       inputSearch = el.closest('.search-block').find('.search-input'),
-      distance = $('.main-menu').width() + 80;
+      distance = $('.main-menu').width() + 100;
 
     if(parent.hasClass('active')) {
       if($(document).width() >= 992) {
@@ -14,7 +14,7 @@ $(window).resize(resizeSearch);
 $('.search-icon').on('click', function(){
   var parent = $(this).closest('.search-block'),
       inputSearch = $(this).closest('.search-block').find('.search-input'),
-      distance = $('.main-menu').width() + 80;
+      distance = $('.main-menu').width() + 100;
 
   if(!parent.hasClass('active')) {
     parent.addClass('active');

@@ -136,4 +136,15 @@
       }
     }
   }
+  &-head {
+    max-width: 620px;
+    margin: 0 auto;
+    position: relative;
+
+    .back {
+      position: absolute;
+      bottom: -38px;
+      left: 0;
+    }
+  }
 }
