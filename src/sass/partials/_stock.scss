@@ -31,7 +31,10 @@
       .thumbnail {
         border-radius: 15px 15px 0 0;
         max-height: 300px;
-        background-size: contain;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        background-size: contain !important;
+        background-color: #ECECEC !important;
       }
       .content {
         padding: 30px 80px 100px;
@@ -44,6 +47,14 @@
             font-size: 18px;
             color: #EB5942;
 
+            a {
+              color: #EB5942;
+              text-decoration: none;
+
+              &:hover {
+                color: $main-color;
+              }
+            }
             &:after {
               position: relative;
               top: 2px;

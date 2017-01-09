@@ -1,5 +1,4 @@
 .icon {
-  cursor: pointer;
   @include transition(all .3s ease);
 
   &-radius {
@@ -17,6 +16,7 @@
   &-logo {
     max-width: 150px;
     max-height: 61px;
+    cursor: pointer;
 
     @media screen and (max-width: $screen-sm-max) {
       max-width: 100px;
@@ -31,6 +31,7 @@
     border: 0;
     background: transparent;
     padding: 0;
+    cursor: pointer;
 
     &:hover {
       .icon-bar {
@@ -56,6 +57,7 @@
     max-width: 19px;
     max-height: 18px;
     color: #000;
+    cursor: pointer;
 
     &:hover {
       color: $main-color;
@@ -65,6 +67,7 @@
     max-width: 42px;
     max-height: 30px;
     color: #3C3C3C;
+    cursor: pointer;
 
     &:hover {
       color: lighten(#3C3C3C, 10%);
@@ -106,6 +109,7 @@
       max-width: 44px;
       max-height: 44px;
       color: #fff;
+      cursor: pointer;
     }
   }
 }
