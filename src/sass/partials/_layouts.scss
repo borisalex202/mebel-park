@@ -121,6 +121,24 @@
   &-slider {
     position: relative;
     z-index: 1;
+    min-height: calc(100vh - 100px);
+
+    .item {
+      min-height: calc(100vh - 100px);      
+
+      .flex {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+      }
+    }
+    @media screen and (max-width: $screen-sm-max) {
+      min-height: calc(100vh - 80px);
+
+      .item {
+        min-height: calc(100vh - 80px);
+      }
+    }
   }
 }
 .design-park {
