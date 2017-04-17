@@ -1,14 +1,21 @@
 .stock {
   &-slider {
-    .slick-track {
-      @include flexbox();
-    }
-    .slick-list {
-      margin: 0 -10px;
-      padding: 10px 0;
+    .slick {
+      &-track {
+        @include flexbox();
+      }
+      &-slide {
+        height: auto;
+        position: relative;
+        padding-bottom: 40px;
+      }
+      &-list {
+        margin: 0 -10px;
+        padding: 10px 0;
 
-      @media screen and (max-width: $screen-xs) {
-        margin: 0 30px;
+        @media screen and (max-width: $screen-xs) {
+          margin: 0 30px;
+        }
       }
     }
   }
@@ -35,6 +42,10 @@
         background-position: center !important;
         background-size: contain !important;
         background-color: #ECECEC !important;
+
+        img {
+          border-radius: 15px 15px 0 0;
+        }
       }
       .content {
         padding: 30px 80px 100px;
@@ -95,6 +106,7 @@
     .thumbnail {
       max-height: 220px;
       overflow: hidden;
+      border-radius: 15px 15px 0 0;
 
       img {
         min-width: 100%;
@@ -108,7 +120,6 @@
     .content {
       padding: 15px 20px 13px;
       min-height: 200px;
-      position: relative;
 
       .title {
         font-size: 16px;
